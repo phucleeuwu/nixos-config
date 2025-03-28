@@ -1,10 +1,11 @@
-{pkgs, ...}: {
+{ pkgs, ... }:
+{
   programs.yazi = {
     enable = true;
     enableZshIntegration = true;
     enableFishIntegration = true;
     enableNushellIntegration = true;
-    shellWrapperName = "yy";
+    shellWrapperName = "y";
     initLua = ../../../yazi/init.lua;
 
     plugins = {
@@ -49,7 +50,7 @@
       manager = {
         prepend_keymap = [
           {
-            on = ["!"];
+            on = [ "!" ];
             run = ''shell "$SHELL" --block'';
             desc = "Open shell here";
           }
@@ -108,7 +109,7 @@
             desc = "Filter files";
           }
           {
-            on = ["s"];
+            on = [ "s" ];
             run = "plugin searchjump";
             desc = "Flash";
           }
@@ -118,7 +119,7 @@
             desc = "Search files by name using fd";
           }
           {
-            on = ["<C-y>"];
+            on = [ "<C-y>" ];
             run = ''shell -- for path in "$@"; do echo "file://$path"; done | wl-copy -t text/uri-list'';
             desc = "Copy to clipboard";
           }
@@ -158,12 +159,12 @@
         ];
         append_keymap = [
           {
-            on = ["e"];
+            on = [ "e" ];
             run = "open";
             desc = "Open the selected files";
           }
           {
-            on = ["E"];
+            on = [ "E" ];
             run = "open --interactive";
             desc = "Open the selected files interactively";
           }
