@@ -1,4 +1,5 @@
-_: {
+{ pkgs, ... }:
+{
   system.defaults = {
     LaunchServices.LSQuarantine = false;
     controlcenter.BatteryShowPercentage = true;
@@ -65,4 +66,6 @@ _: {
   services = {
     # karabiner-elements.enable = true;
   };
+  programs.fish.enable = true; # macOs default shell
+  environment.shells = [ pkgs.fish ];
 }
