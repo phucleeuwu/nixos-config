@@ -1,10 +1,10 @@
-{ pkgs, ... }: {
+{pkgs, ...}: {
   programs.aerospace = {
     enable = true;
     userSettings = {
       start-at-login = true;
-      after-login-command = [ ];
-      after-startup-command = [ ];
+      after-login-command = [];
+      after-startup-command = [];
 
       enable-normalization-flatten-containers = true;
       enable-normalization-opposite-orientation-for-nested-containers = true;
@@ -15,8 +15,8 @@
 
       key-mapping.preset = "qwerty";
 
-      on-focused-monitor-changed = [ "move-mouse monitor-lazy-center" ];
-      on-focus-changed = [ "move-mouse window-lazy-center" ];
+      on-focused-monitor-changed = ["move-mouse monitor-lazy-center"];
+      on-focus-changed = ["move-mouse window-lazy-center"];
 
       automatically-unhide-macos-hidden-apps = false;
 
@@ -82,13 +82,13 @@
       };
 
       mode.service.binding = {
-        "esc" = [ "reload-config" "mode main" ];
-        "r" = [ "flatten-workspace-tree" "mode main" ];
-        "backspace" = [ "close-all-windows-but-current" "mode main" ];
-        "alt-shift-h" = [ "join-with left" "mode main" ];
-        "alt-shift-j" = [ "join-with down" "mode main" ];
-        "alt-shift-k" = [ "join-with up" "mode main" ];
-        "alt-shift-l" = [ "join-with right" "mode main" ];
+        "esc" = ["reload-config" "mode main"];
+        "r" = ["flatten-workspace-tree" "mode main"];
+        "backspace" = ["close-all-windows-but-current" "mode main"];
+        "alt-shift-h" = ["join-with left" "mode main"];
+        "alt-shift-j" = ["join-with down" "mode main"];
+        "alt-shift-k" = ["join-with up" "mode main"];
+        "alt-shift-l" = ["join-with right" "mode main"];
       };
 
       # Automatic Window Assignment

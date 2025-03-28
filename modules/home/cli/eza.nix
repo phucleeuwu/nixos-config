@@ -1,6 +1,9 @@
-{ config, lib, pkgs, ... }:
-
 {
+  config,
+  lib,
+  pkgs,
+  ...
+}: {
   programs.eza = {
     enable = true;
     enableZshIntegration = true;
@@ -9,6 +12,6 @@
     git = true;
     icons = "always";
     colors = "always";
-    extraOptions = [ "--group-directories-first" ];
+    extraOptions = ["--group-directories-first"];
   };
 }

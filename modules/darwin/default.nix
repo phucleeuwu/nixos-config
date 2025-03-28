@@ -1,17 +1,15 @@
 # Configuration common to all macOS systems
-{ flake, ... }:
-let
+{flake, ...}: let
   inherit (flake) config inputs;
   inherit (inputs) self;
-in
-{
+in {
   imports = [
     {
       # For home-manager to work.
       users.users.${flake.config.me.username} = {
         home = "/Users/${flake.config.me.username}";
       };
-      home-manager.users.${config.me.username} = { };
+      home-manager.users.${config.me.username} = {};
       home-manager.sharedModules = [
         self.homeModules.default
         self.homeModules.darwin-only
