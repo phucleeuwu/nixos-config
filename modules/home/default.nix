@@ -1,6 +1,7 @@
 {
   home.stateVersion = "22.11";
   imports = [
+    ./aliases.nix
     ./shell/fish.nix
     # ./shell/nushell.nix
     # ./shell/zsh.nix

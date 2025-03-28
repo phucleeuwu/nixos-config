@@ -1,19 +1,17 @@
 # Configuration for my M1 Macbook Max as headless server
-{flake, ...}: let
+{flake, pkgs, config, ...}: let
   inherit (flake) inputs;
   inherit (inputs) self;
 in {
   imports = [
     self.darwinModules.default
-    ./configuration.nix
   ];
+  nix.enable = false;
+  nixos-unified.sshTarget = "srid@infinitude";
   nixpkgs.hostPlatform = "aarch64-darwin";
   # $ darwin-rebuild changelog
   system.stateVersion = 4;
   security.pam.services.sudo_local.touchIdAuth = true;
-
-  programs.fish.enable = true; # macOs default shell
-  environment.shells = [pkgs.fish];
 
   homebrew = {
     enable = true;

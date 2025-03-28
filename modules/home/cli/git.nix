@@ -5,7 +5,6 @@ _: {
       init.defaultBranch = "main";
 
       delta = {
-        enable = true;
         side-by-side = false;
         true-color = "always";
         hyperlinks = true;
@@ -15,4 +14,5 @@ _: {
       credential.helper = "osxkeychain"; # macOS Keychain for credentials
     };
   };
+  programs.git.delta.enable = true;
 }

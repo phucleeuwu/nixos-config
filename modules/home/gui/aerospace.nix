@@ -67,8 +67,6 @@
 
         # Application Shortcuts
         "alt-g" = "exec-and-forget open -a /Applications/Ghostty.app";
-        "alt-a" = "exec-and-forget open -a ${pkgs.arc-browser}/Applications/Arc.app";
-        "alt-c" = "exec-and-forget open -a ${pkgs.chatgpt}/Applications/ChatGPT.app";
       };
 
       mode.resize.binding = {
