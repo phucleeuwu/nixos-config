@@ -6,8 +6,6 @@ let
   inherit (inputs) self;
 in
 {
-  nixos-unified.sshTarget = "srid@infinitude";
-
   imports = [
     self.darwinModules.default
   ];
