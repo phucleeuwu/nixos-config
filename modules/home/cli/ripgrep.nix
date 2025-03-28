@@ -1,6 +1,4 @@
-{
-  ...
-}: {
+_: {
   programs.ripgrep = {
     enable = true;
     arguments = [

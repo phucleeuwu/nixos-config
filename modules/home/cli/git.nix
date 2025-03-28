@@ -1,6 +1,4 @@
-{
-  ...
-}: {
+_: {
   programs.git = {
     enable = true;
     extraConfig = {

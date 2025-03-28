@@ -1,6 +1,4 @@
-{
-  ...
-}: {
+_: {
   programs.nh = {
     enable = true;
     clean = {
