@@ -1,8 +1,6 @@
 # Common to Linux & darwin
 {
   flake,
-  pkgs,
-  lib,
   ...
 }: let
   inherit (flake) inputs;
