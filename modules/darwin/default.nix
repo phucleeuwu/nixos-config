@@ -14,7 +14,7 @@ in {
         self.homeModules.default
         self.homeModules.darwin-only
         inputs.catppuccin.homeManagerModules.catppuccin
-	inputs.lazyvim.homeManagerModules.lazyvim
+        inputs.lazyvim.homeManagerModules.lazyvim
       ];
     }
     self.nixosModules.common
