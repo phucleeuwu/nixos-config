@@ -1,9 +1,9 @@
 {
   programs.zoxide = {
     enable = true;
+    enableZshIntegration = true;
     enableFishIntegration = true;
     enableNushellIntegration = true;
-    enableZshIntegration = true;
     options = [
       "--cmd cd"
     ];

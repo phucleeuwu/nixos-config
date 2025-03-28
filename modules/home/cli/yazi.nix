@@ -1,10 +1,11 @@
-{pkgs, ...}: {
+{ pkgs, ... }:
+{
   programs.yazi = {
     enable = true;
     enableZshIntegration = true;
     enableFishIntegration = true;
     enableNushellIntegration = true;
-    shellWrapperName = "y";
+    shellWrapperName = "yy";
     initLua = ../../../yazi/init.lua;
 
     plugins = {
@@ -20,7 +21,11 @@
     # yazi.toml
     settings = {
       manager = {
-        ratio = [1 3 4];
+        ratio = [
+          1
+          3
+          4
+        ];
         show_hidden = true;
       };
       preview = {
@@ -45,12 +50,15 @@
       manager = {
         prepend_keymap = [
           {
-            on = ["!"];
+            on = [ "!" ];
             run = ''shell "$SHELL" --block'';
             desc = "Open shell here";
           }
           {
-            on = ["c" "a"];
+            on = [
+              "c"
+              "a"
+            ];
             run = "plugin compress";
             desc = "Archive selected files";
           }
@@ -85,17 +93,23 @@
             desc = "Move cursor down";
           }
           {
-            on = ["f" "g"];
+            on = [
+              "f"
+              "g"
+            ];
             run = "plugin fg";
             desc = "Find file by content (fuzzy match)";
           }
           {
-            on = ["f" "f"];
+            on = [
+              "f"
+              "f"
+            ];
             run = "filter --smart";
             desc = "Filter files";
           }
           {
-            on = ["s"];
+            on = [ "s" ];
             run = "plugin searchjump";
             desc = "Flash";
           }
@@ -105,7 +119,7 @@
             desc = "Search files by name using fd";
           }
           {
-            on = ["<C-y>"];
+            on = [ "<C-y>" ];
             run = ''shell -- for path in "$@"; do echo "file://$path"; done | wl-copy -t text/uri-list'';
             desc = "Copy to clipboard";
           }
@@ -115,7 +129,10 @@
             desc = "Create a dir";
           }
           {
-            on = ["g" "r"];
+            on = [
+              "g"
+              "r"
+            ];
             run = ''shell -- ya emit cd "$(git rev-parse --show-toplevel)"'';
             desc = "Root of Git Repo";
           }
@@ -142,12 +159,12 @@
         ];
         append_keymap = [
           {
-            on = ["e"];
+            on = [ "e" ];
             run = "open";
             desc = "Open the selected files";
           }
           {
-            on = ["E"];
+            on = [ "E" ];
             run = "open --interactive";
             desc = "Open the selected files interactively";
           }

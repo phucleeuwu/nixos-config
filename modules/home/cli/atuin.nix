@@ -1,9 +1,9 @@
 _: {
   programs.atuin = {
     enable = true;
+    enableZshIntegration = true;
     enableFishIntegration = true;
     enableNushellIntegration = true;
-    enableZshIntegration = true;
     flags = [
       "--disable-up-arrow"
     ];
