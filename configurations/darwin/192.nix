@@ -5,7 +5,7 @@
 in {
   imports = [
     self.darwinModules.default
-    ./system.nix
+    ./configuration.nix
   ];
   nixpkgs.hostPlatform = "aarch64-darwin";
   # $ darwin-rebuild changelog
