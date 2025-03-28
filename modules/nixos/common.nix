@@ -2,7 +2,6 @@
 {
   flake,
   pkgs,
-  lib,
   ...
 }: let
   inherit (flake) inputs;
