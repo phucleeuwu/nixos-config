@@ -13,7 +13,6 @@ in
   ];
 
   nixpkgs.hostPlatform = "aarch64-darwin";
-  networking.hostName = "infinitude";
 
   system.keyboard = {
     enableKeyMapping = true;
