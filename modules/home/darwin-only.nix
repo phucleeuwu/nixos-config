@@ -1,12 +1,10 @@
 { pkgs, ... }:
 {
   imports = [
-    ./all/zsh.nix
-    ./all/nushell.nix
-    # ./all/emacs.nix
+    ./gui/aerospace.nix
   ];
 
   home.packages = with pkgs; [
-    maccy
+    arc-browser
   ];
 }
