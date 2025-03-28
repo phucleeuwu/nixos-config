@@ -1,4 +1,4 @@
-{pkgs, ...}: {
+{ ...}: {
   programs.aerospace = {
     enable = true;
     userSettings = {

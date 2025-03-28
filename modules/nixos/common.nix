@@ -6,7 +6,6 @@
   ...
 }: let
   inherit (flake) inputs;
-  inherit (inputs) self;
 in {
   home-manager = {
     backupFileExtension = "backup";

@@ -1,5 +1,5 @@
 # Configuration for my M1 Macbook Max as headless server
-{flake, pkgs, config, ...}: let
+{flake, ...}: let
   inherit (flake) inputs;
   inherit (inputs) self;
 in {
