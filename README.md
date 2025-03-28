@@ -58,12 +58,6 @@ Start from `flake.nix` (see [Flakes](https://nixos.wiki/wiki/Flakes)). [`flake-p
 
 ## Tips
 
-- To update NixOS (and other inputs) run `nix flake update`
-  - You may also update a subset of inputs, e.g.
-    ```sh
-    nix flake lock --update-input nixpkgs --update-input darwin --update-input home-manager
-    # Or, `nix run .#update`
-    ```
 - To free up disk space,
   ```sh-session
   sudo nix-env -p /nix/var/nix/profiles/system --delete-generations +2
