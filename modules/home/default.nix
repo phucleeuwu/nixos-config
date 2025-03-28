@@ -31,6 +31,7 @@
     ./cli/yazi.nix
     # ./cli/zellij.nix
     ./cli/zoxide.nix
+    ./cli/lazyvim.nix
 
     # ./gui/ghostty.nix
     # ./gui/zed-editor.nix

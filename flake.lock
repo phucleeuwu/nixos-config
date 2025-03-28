@@ -56,6 +56,27 @@
         "type": "github"
       }
     },
+    "lazyvim": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ],
+        "systems": "systems"
+      },
+      "locked": {
+        "lastModified": 1743107186,
+        "narHash": "sha256-71gPq2uUqeUGPs9M0y/SQRXqnZ0VJ9CUSBJafqJWBLQ=",
+        "owner": "matadaniel",
+        "repo": "LazyVim-module",
+        "rev": "a0d4f78160caaee7a649ffa5b460fe2a37553470",
+        "type": "github"
+      },
+      "original": {
+        "owner": "matadaniel",
+        "repo": "LazyVim-module",
+        "type": "github"
+      }
+    },
     "nix-darwin": {
       "inputs": {
         "nixpkgs": [
@@ -144,9 +165,25 @@
         "catppuccin": "catppuccin",
         "flake-parts": "flake-parts",
         "home-manager": "home-manager",
+        "lazyvim": "lazyvim",
         "nix-darwin": "nix-darwin",
         "nixos-unified": "nixos-unified",
         "nixpkgs": "nixpkgs_2"
+      }
+    },
+    "systems": {
+      "locked": {
+        "lastModified": 1689347949,
+        "narHash": "sha256-12tWmuL2zgBgZkdoB6qXZsgJEH9LR3oUgpaQq2RbI80=",
+        "owner": "nix-systems",
+        "repo": "default-linux",
+        "rev": "31732fcf5e8fea42e59c2488ad31a0e651500f68",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nix-systems",
+        "repo": "default-linux",
+        "type": "github"
       }
     }
   },

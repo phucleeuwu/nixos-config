@@ -16,6 +16,10 @@
 
     # Software inputs
     catppuccin.url = "github:catppuccin/nix";
+    lazyvim = {
+      url = "github:matadaniel/LazyVim-module";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = inputs:
