@@ -3,11 +3,9 @@
   flake,
   pkgs,
   ...
-}:
-let
+}: let
   inherit (flake) config inputs;
-in
-{
+in {
   home-manager = {
     backupFileExtension = "backup";
     useUserPackages = true;
@@ -15,7 +13,7 @@ in
   };
   nixpkgs.config.allowUnfree = true;
   nix = {
-    nixPath = [ "nixpkgs=${inputs.nixpkgs}" ]; # Enables use of `nix-shell -p ...` etc
+    nixPath = ["nixpkgs=${inputs.nixpkgs}"]; # Enables use of `nix-shell -p ...` etc
     registry.nixpkgs.flake = inputs.nixpkgs; # Make `nix shell` etc use pinned nixpkgs
     settings = {
       max-jobs = "auto";
@@ -24,7 +22,11 @@ in
       flake-registry = builtins.toFile "empty-flake-registry.json" ''{"flakes":[],"version":2}'';
       trusted-users = [
         "root"
-        (if pkgs.stdenv.isDarwin then config.me.username else "@wheel")
+        (
+          if pkgs.stdenv.isDarwin
+          then config.me.username
+          else "@wheel"
+        )
       ];
     };
   };
