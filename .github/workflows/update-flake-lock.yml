@@ -25,7 +25,7 @@ jobs:
       - name: Check for changes
         id: check_changes
         run: |
-          if git diff --quiet nix/flake.lock; then
+          if git diff --quiet flake.lock; then
             echo "No updates to flake.lock"
             echo "changed=false" >> $GITHUB_ENV
           else
