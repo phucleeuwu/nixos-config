@@ -6,7 +6,6 @@
   ];
   perSystem = {
     self',
-    pkgs,
     ...
   }: {
     # Enables 'nix run' to activate.
