@@ -22,9 +22,9 @@
     };
   };
 
-  outputs = inputs:
-    inputs.nixos-unified.lib.mkFlake
-    {
+  outputs =
+    inputs:
+    inputs.nixos-unified.lib.mkFlake {
       inherit inputs;
       root = ./.;
     };
