@@ -1,7 +1,8 @@
-_: {
+{ flake, ... }:
+{
   nix-homebrew = {
     enable = true;
-    user = "${config.me.username}";
+    user = "${flake.config.me.username}";
     autoMigrate = true;
   };
   homebrew = {
