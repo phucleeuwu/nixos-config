@@ -1,10 +1,8 @@
 # Configuration for my M1 Macbook Max as headless server
-{ flake, ... }:
-let
+{flake, ...}: let
   inherit (flake) inputs;
   inherit (inputs) self;
-in
-{
+in {
   imports = [
     self.darwinModules.default
   ];
