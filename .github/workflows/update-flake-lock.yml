@@ -3,6 +3,10 @@ name: update-flake-lock
 on:
   workflow_dispatch:  # Allows manual triggering
   push:
+    branches:
+      - main  # Adjust based on your default branch
+    paths:
+      - "flake.lock"
   schedule:
     - cron: '0 0 * * *'  # Runs daily at midnight
 
@@ -19,8 +23,7 @@ jobs:
         uses: DeterminateSystems/nix-installer-action@main
 
       - name: Update flake.lock
-        run: |
-          nix flake update --flake .
+        run: nix flake update
 
       - name: Check for changes
         id: check_changes
@@ -35,10 +38,10 @@ jobs:
       - name: Commit and push changes
         if: env.changed == 'true'
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ github.token }}
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          git add nix/flake.lock
+          git add flake.lock
           git commit -m "Auto update flake.lock"
           git push https://x-access-token:$GITHUB_TOKEN@github.com/${{ github.repository }}.git
