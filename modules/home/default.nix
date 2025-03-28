@@ -1,11 +1,5 @@
+{ pkgs, ... }:
 {
-  home.stateVersion = "25.05";
-  xdg.enable = true;
-  catppuccin = {
-    enable = true;
-    flavor = "mocha";
-    accent = "peach";
-  };
   imports = [
     ./aliases.nix
 
@@ -37,5 +31,15 @@
     ./gui/kitty.nix
     # ./gui/ghostty.nix
     # ./gui/zed-editor.nix
+  ];
+  home.stateVersion = "25.05";
+  xdg.enable = true;
+  catppuccin = {
+    enable = true;
+    flavor = "mocha";
+    accent = "peach";
+  };
+  home.packages = with pkgs; [
+    maple-mono.NF
   ];
 }

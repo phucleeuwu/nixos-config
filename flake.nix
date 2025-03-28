@@ -16,13 +16,15 @@
 
     # Software inputs
     catppuccin.url = "github:catppuccin/nix";
+    nix-homebrew.url = "github:zhaofengli-wip/nix-homebrew";
     lazyvim = {
       url = "github:matadaniel/LazyVim-module";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
 
-  outputs = inputs:
+  outputs =
+    inputs:
     inputs.nixos-unified.lib.mkFlake {
       inherit inputs;
       root = ./.;
