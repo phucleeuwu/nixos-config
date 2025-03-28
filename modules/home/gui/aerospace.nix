@@ -1,10 +1,11 @@
-{pkgs, ...}: {
+{ pkgs, ... }:
+{
   programs.aerospace = {
     enable = true;
     userSettings = {
       start-at-login = true;
-      after-login-command = [];
-      after-startup-command = [];
+      after-login-command = [ ];
+      after-startup-command = [ ];
 
       enable-normalization-flatten-containers = true;
       enable-normalization-opposite-orientation-for-nested-containers = true;
@@ -15,8 +16,8 @@
 
       key-mapping.preset = "qwerty";
 
-      on-focused-monitor-changed = ["move-mouse monitor-lazy-center"];
-      on-focus-changed = ["move-mouse window-lazy-center"];
+      on-focused-monitor-changed = [ "move-mouse monitor-lazy-center" ];
+      on-focus-changed = [ "move-mouse window-lazy-center" ];
 
       automatically-unhide-macos-hidden-apps = false;
 
@@ -66,7 +67,7 @@
         "alt-shift-semicolon" = "mode service";
 
         # Application Shortcuts
-        "alt-t" = "exec-and-forget open -a ${pkgs.kitty}/Applications/kitty.app";
+        "alt-g" = "exec-and-forget open -a ${pkgs.kitty}/Applications/kitty.app";
       };
 
       mode.resize.binding = {
@@ -114,7 +115,7 @@
       on-window-detected = [
         {
           "if".app-id = "net.kovidgoyal.kitty";
-          run = "move-node-to-workspace K";
+          run = "move-node-to-workspace G";
         }
         {
           "if".app-id = "company.thebrowser.Browser";
