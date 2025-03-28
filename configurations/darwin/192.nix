@@ -15,14 +15,10 @@ in
   nixpkgs.hostPlatform = "aarch64-darwin";
   networking.hostName = "infinitude";
 
-  services.tailscale.enable = true;
-
   system.keyboard = {
     enableKeyMapping = true;
     remapCapsLockToControl = true;
   };
-
-  ids.gids.nixbld = 350;
 
   # Used for backwards compatibility, please read the changelog before changing.
   # $ darwin-rebuild changelog
