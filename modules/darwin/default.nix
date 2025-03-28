@@ -13,6 +13,7 @@ in {
       home-manager.sharedModules = [
         self.homeModules.default
         self.homeModules.darwin-only
+        inputs.catppuccin.hmModules.catppuccin
       ];
     }
     self.nixosModules.common
