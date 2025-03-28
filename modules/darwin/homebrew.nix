@@ -1,7 +1,7 @@
 _: {
   nix-homebrew = {
     enable = true;
-    user = "phuc";
+    user = "${config.me.username}";
     autoMigrate = true;
   };
   homebrew = {
