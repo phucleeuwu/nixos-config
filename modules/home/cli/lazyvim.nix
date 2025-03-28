@@ -1,4 +1,4 @@
-{...}: {
+_: {
   programs.lazyvim = {
     enable = true;
     extras = {
