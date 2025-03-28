@@ -1,4 +1,3 @@
-# Configuration for this repo
 # See ./modules/flake-parts/config.nix for module options.
 {
   me = {
