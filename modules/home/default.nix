@@ -1,5 +1,11 @@
 {
   home.stateVersion = "22.11";
+  xdg.enable = true;
+  catppuccin = {
+    enable = true;
+    flavor = "mocha";
+    accent = "peach";
+  };
   imports = [
     ./aliases.nix
     ./shell/fish.nix
