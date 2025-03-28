@@ -10,7 +10,7 @@ in {
   nixpkgs.hostPlatform = "aarch64-darwin";
   # $ darwin-rebuild changelog
   system.stateVersion = 4;
-  security.pam.services.sudo_local.touchIdAuth = true;  
+  security.pam.services.sudo_local.touchIdAuth = true;
 
   programs.fish.enable = true; # macOs default shell
   environment.shells = [pkgs.fish];
