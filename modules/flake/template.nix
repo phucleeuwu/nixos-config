@@ -44,7 +44,7 @@
           Enjoy!
         '';
         path = builtins.path {
-          path = parent.path;
+          inherit (parent) path;
           filter = path: _: let
             f = filters path;
           in
@@ -66,7 +66,7 @@
           Enjoy!
         '';
         path = builtins.path {
-          path = parent.path;
+          inherit (parent) path;
           filter = path: _: let
             f = filters path;
           in
@@ -97,7 +97,7 @@
           Enjoy!
         '';
         path = builtins.path {
-          path = parent.path;
+          inherit (parent) path;
           filter = path: _: let
             f = filters path;
           in
