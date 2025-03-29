@@ -1,4 +1,5 @@
-{pkgs, ...}: {
+{ pkgs, ... }:
+{
   imports = [
     ./aliases.nix
 
@@ -19,7 +20,7 @@
     ./cli/starship.nix
     ./cli/yazi.nix
     ./cli/zoxide.nix
-    ./cli/lazyvim.nix
+    ./cli/neovim.nix
     # ./cli/gh-dash.nix
     # ./cli/helix.nix
     # ./cli/nh.nix
