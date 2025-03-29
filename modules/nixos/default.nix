@@ -10,6 +10,8 @@ in {
       home-manager.sharedModules = [
         self.homeModules.default
         self.homeModules.linux-only
+        inputs.catppuccin.homeManagerModules.catppuccin
+        inputs.lazyvim.homeManagerModules.lazyvim
       ];
     }
     self.nixosModules.common
