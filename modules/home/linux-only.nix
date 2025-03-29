@@ -1,5 +1,4 @@
-{pkgs,...}:
-{
+{pkgs, ...}: {
   imports = [
     ./gui/hyprlock.nix
   ];
