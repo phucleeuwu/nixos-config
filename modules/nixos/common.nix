@@ -2,11 +2,20 @@
 {
   flake,
   pkgs,
+  lib,
   ...
 }: let
   inherit (flake) config inputs;
+  inherit (inputs) self;
 in {
-  nixpkgs.config.allowUnfree = true;
+  nixpkgs = {
+    config = {
+      allowBroken = true;
+      allowUnsupportedSystem = true;
+      allowUnfree = true;
+    };
+    overlays = lib.attrValues self.overlays;
+  };
   home-manager = {
     backupFileExtension = "backup";
     useUserPackages = true;
