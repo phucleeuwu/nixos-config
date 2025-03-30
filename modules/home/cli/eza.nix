@@ -5,8 +5,8 @@ _: {
     enableFishIntegration = true;
     enableNushellIntegration = true;
     git = true;
-    icons = "always";
-    colors = "always";
+    icons = "auto";
+    colors = "auto";
     extraOptions = ["--group-directories-first"];
   };
 }
