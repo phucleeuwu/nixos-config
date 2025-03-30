@@ -8,6 +8,7 @@
     enable = true;
     casks = [
       "karabiner-elements"
+      "chatgpt"
     ];
     onActivation.cleanup = "zap"; # Declarative nature of homebrew
   };

@@ -5,7 +5,7 @@ in {
   imports = [
     self.darwinModules.default
   ];
-  networking.hostName = "phuc";
+  networking.hostName = "192";
   nix.enable = false; #delete this if you don't use determinate nix
   nixos-unified.sshTarget = "myuser@myhost";
   nixpkgs.hostPlatform = "aarch64-darwin";
