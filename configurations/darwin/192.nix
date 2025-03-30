@@ -6,7 +6,7 @@ in {
   imports = [
     self.darwinModules.default
   ];
-  nix.enable = false;
+  nix.enable = false; #delete this if you don't use determinate nix
   nixos-unified.sshTarget = "myuser@myhost";
   nixpkgs.hostPlatform = "aarch64-darwin";
   system.stateVersion = 6;
