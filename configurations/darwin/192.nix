@@ -1,4 +1,3 @@
-# Configuration for my M1 Macbook Max as headless server
 {flake, ...}: let
   inherit (flake) inputs;
   inherit (inputs) self;
@@ -6,6 +5,7 @@ in {
   imports = [
     self.darwinModules.default
   ];
+  networking.hostName = "phuc";
   nix.enable = false; #delete this if you don't use determinate nix
   nixos-unified.sshTarget = "myuser@myhost";
   nixpkgs.hostPlatform = "aarch64-darwin";

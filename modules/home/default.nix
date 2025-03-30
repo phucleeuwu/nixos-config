@@ -27,7 +27,8 @@
     # ./cli/tmux.nix
     # ./cli/zellij.nix
 
-    ./gui/kitty.nix
+    ./gui/wezterm.nix
+    # ./gui/kitty.nix
     # ./gui/ghostty.nix
     # ./gui/zed-editor.nix
   ];

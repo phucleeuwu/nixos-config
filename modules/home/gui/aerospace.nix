@@ -66,7 +66,8 @@
         "alt-shift-semicolon" = "mode service";
 
         # Application Shortcuts
-        "alt-g" = "exec-and-forget open -a ${pkgs.kitty}/Applications/kitty.app";
+        "alt-w" = "exec-and-forget open -a ${pkgs.wezterm}/Applications/Wezterm.app";
+        "alt-a" = "exec-and-forget open -a ${pkgs.arc-browser}/Applications/Arc.app";
       };
 
       mode.resize.binding = {
@@ -113,8 +114,8 @@
       # Automatic Window Assignment
       on-window-detected = [
         {
-          "if".app-id = "net.kovidgoyal.kitty";
-          run = "move-node-to-workspace G";
+          "if".app-id = "com.github.wez.wezterm";
+          run = "move-node-to-workspace W";
         }
         {
           "if".app-id = "company.thebrowser.Browser";
