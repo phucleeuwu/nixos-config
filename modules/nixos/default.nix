@@ -16,6 +16,4 @@ in {
     }
     self.nixosModules.common
   ];
-
-  boot.loader.grub.configurationLimit = 5; # Who needs more?
 }
