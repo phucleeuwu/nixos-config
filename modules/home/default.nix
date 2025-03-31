@@ -31,6 +31,7 @@
   home.stateVersion = "25.05";
   xdg.enable = true;
   catppuccin = {
+    wezterm.apply = true;
     enable = true;
     flavor = "mocha";
     accent = "peach";
