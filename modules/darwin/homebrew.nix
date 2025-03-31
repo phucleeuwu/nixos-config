@@ -9,6 +9,7 @@
     casks = [
       "karabiner-elements"
       "chatgpt"
+      "spotify"
     ];
     onActivation.cleanup = "zap"; # Declarative nature of homebrew
   };
