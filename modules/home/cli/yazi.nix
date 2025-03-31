@@ -32,10 +32,8 @@
       opener = {
         edit = [
           {
-            run = "${pkgs.neovim}/bin/nvim \"$@\"";
-            desc = "$EDITOR";
+            run = "nvim \"$@\"";
             block = true;
-            for = "unix";
           }
         ];
       };
