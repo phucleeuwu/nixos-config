@@ -1,7 +1,8 @@
-_: {
+{pkgs, ...}: {
   programs.kitty = {
     enable = true;
     shellIntegration = {
+      mode = "no-cursor";
       enableZshIntegration = true;
       enableFishIntegration = true;
       # enableNushellIntegration = true;
@@ -12,7 +13,7 @@ _: {
     };
     settings = {
       hide_window_decorations = true;
-      macos_option_as_alt = true;
+      macos_option_as_alt = "left";
     };
   };
 }
