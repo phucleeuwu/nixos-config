@@ -6,7 +6,6 @@
     enableNushellIntegration = true;
     shellWrapperName = "y";
     initLua = ../../../yazi/init.lua;
-
     plugins = {
       compress = ../../../yazi/plugins/compress.yazi;
       fg = ../../../yazi/plugins/fg.yazi;
@@ -16,7 +15,6 @@
       yatline-githead = ../../../yazi/plugins/yatline-githead.yazi;
       yatline = ../../../yazi/plugins/yatline.yazi;
     };
-
     # yazi.toml
     settings = {
       manager = {
@@ -42,7 +40,6 @@
         ];
       };
     };
-
     # keymap.toml
     keymap = {
       "$schema" = "https://yazi-rs.github.io/schemas/keymap.json";

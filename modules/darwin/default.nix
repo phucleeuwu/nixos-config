@@ -12,7 +12,7 @@ in {
       home-manager.sharedModules = [
         self.homeModules.default
         self.homeModules.darwin-only
-        inputs.catppuccin.homeManagerModules.catppuccin
+        inputs.catppuccin.homeModules.catppuccin
         inputs.lazyvim.homeManagerModules.lazyvim
       ];
     }

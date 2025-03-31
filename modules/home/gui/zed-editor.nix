@@ -29,7 +29,6 @@
         font_family = "Maple Mono NF";
       };
     };
-
     extensions = [
       "html"
       "git-firefly"

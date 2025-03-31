@@ -1,11 +1,9 @@
 {pkgs, ...}: {
   imports = [
     ./aliases.nix
-
     ./shell/fish.nix
     # ./shell/nushell.nix
     # ./shell/zsh.nix
-
     ./cli/atuin.nix
     ./cli/bat.nix
     ./cli/carapace.nix
@@ -26,7 +24,6 @@
     # ./cli/oh-my-posh.nix
     # ./cli/tmux.nix
     # ./cli/zellij.nix
-
     ./gui/wezterm.nix
     # ./gui/kitty.nix
     # ./gui/ghostty.nix

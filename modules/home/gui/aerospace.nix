@@ -5,21 +5,15 @@
       start-at-login = true;
       after-login-command = [];
       after-startup-command = [];
-
       enable-normalization-flatten-containers = true;
       enable-normalization-opposite-orientation-for-nested-containers = true;
-
       accordion-padding = 80;
       default-root-container-layout = "tiles";
       default-root-container-orientation = "auto";
-
       key-mapping.preset = "qwerty";
-
       on-focused-monitor-changed = ["move-mouse monitor-lazy-center"];
       on-focus-changed = ["move-mouse window-lazy-center"];
-
       automatically-unhide-macos-hidden-apps = false;
-
       gaps = {
         inner.horizontal = 8;
         inner.vertical = 8;
@@ -30,17 +24,13 @@
           right = 8;
         };
       };
-
       mode.main.binding = {
         "alt-shift-space" = "layout floating tiling";
         "alt-shift-f" = "fullscreen";
-
         "alt-minus" = "resize smart -50";
         "alt-equal" = "resize smart +50";
-
         "alt-slash" = "layout tiles horizontal vertical";
         "alt-comma" = "layout accordion horizontal vertical";
-
         "alt-h" = "focus left";
         "alt-j" = "focus down";
         "alt-k" = "focus up";
@@ -49,7 +39,6 @@
         "alt-shift-j" = "move down";
         "alt-shift-k" = "move up";
         "alt-shift-l" = "move right";
-
         "alt-1" = "workspace 1";
         "alt-2" = "workspace 2";
         "alt-3" = "workspace 3";
@@ -58,18 +47,14 @@
         "alt-shift-2" = "move-node-to-workspace 2";
         "alt-shift-3" = "move-node-to-workspace 3";
         "alt-shift-4" = "move-node-to-workspace 4";
-
         "alt-tab" = "workspace-back-and-forth";
         "alt-shift-tab" = "move-workspace-to-monitor --wrap-around next";
-
         "alt-shift-r" = "mode resize";
         "alt-shift-semicolon" = "mode service";
-
         # Application Shortcuts
         "alt-w" = "exec-and-forget open -a ${pkgs.wezterm}/Applications/Wezterm.app";
         "alt-a" = "exec-and-forget open -a ${pkgs.arc-browser}/Applications/Arc.app";
       };
-
       mode.resize.binding = {
         "h" = "resize width -50";
         "j" = "resize height +50";
@@ -79,7 +64,6 @@
         "enter" = "mode main";
         "esc" = "mode main";
       };
-
       mode.service.binding = {
         "esc" = [
           "reload-config"
@@ -110,7 +94,6 @@
           "mode main"
         ];
       };
-
       # Automatic Window Assignment
       on-window-detected = [
         {
