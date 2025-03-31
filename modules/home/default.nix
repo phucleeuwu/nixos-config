@@ -20,7 +20,6 @@
     ./cli/neovim.nix
     # ./cli/gh-dash.nix
     # ./cli/helix.nix
-    # ./cli/nh.nix
     # ./cli/oh-my-posh.nix
     # ./cli/tmux.nix
     # ./cli/zellij.nix
@@ -38,5 +37,7 @@
   };
   home.packages = with pkgs; [
     maple-mono.NF
+    spotify
+    chatgpt
   ];
 }

@@ -1,7 +1,6 @@
 {pkgs, ...}: {
   imports = [
     ./gui/hyprlock.nix
-  ];
-  home.packages = with pkgs; [
+    ./cli/nh.nix
   ];
 }
