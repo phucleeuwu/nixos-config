@@ -8,7 +8,7 @@ in {
   networking.hostName = "192";
 
   nixpkgs.overlays = [
-    (final: prev: {
+    (final: _prev: {
       generated = (import ../../_sources/generated.nix) {
         inherit
           (final)

@@ -1,6 +1,6 @@
 {pkgs, ...}: {
   nixpkgs.overlays = [
-    (final: prev: {
+    (_final: prev: {
       sbarlua = prev.callPackage ./sbarlua.nix {};
     })
   ];
