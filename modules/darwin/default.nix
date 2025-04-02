@@ -21,7 +21,6 @@ in {
     self.nixosModules.common
     self.darwinModules.system
     self.darwinModules.homebrew
-    self.darwinModules.jankyborders
     ./sketchybar/config.nix
   ];
 }
