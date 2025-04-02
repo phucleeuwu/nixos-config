@@ -20,14 +20,14 @@
         "move-mouse window-lazy-center"
       ];
       automatically-unhide-macos-hidden-apps = false;
-        gaps = {
-          inner.horizontal = 10;
-          inner.vertical = 10;
-          outer.left = 5;
-          outer.bottom = 45;
-          outer.top = 5;
-          outer.right = 5;
-        };
+      gaps = {
+        inner.horizontal = 10;
+        inner.vertical = 10;
+        outer.left = 5;
+        outer.bottom = 45;
+        outer.top = 5;
+        outer.right = 5;
+      };
       mode.main.binding = {
         "alt-shift-space" = "layout floating tiling";
         "alt-f" = "fullscreen";

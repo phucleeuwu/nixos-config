@@ -3,12 +3,10 @@
   lib,
   stdenv,
 }:
-
 stdenv.mkDerivation {
   inherit (pkgs.generated.sbarlua) pname version src;
 
-  buildInputs =
-    with pkgs;
+  buildInputs = with pkgs;
     [
       gcc
       readline
@@ -30,7 +28,7 @@ stdenv.mkDerivation {
     description = "A Lua API for SketchyBar";
     homepage = "git@github.com:FelixKratz/SbarLua.git";
     license = lib.licenses.gpl3Only;
-    maintainers = with lib.maintainers; [ davsanchez ];
+    maintainers = with lib.maintainers; [davsanchez];
     platforms = lib.platforms.darwin;
   };
 }
