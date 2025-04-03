@@ -22,6 +22,6 @@ in {
     self.darwinModules.system
     self.darwinModules.homebrew
     ./sketchybar/config.nix
-    ./aerospace/config.nix
+    ./aerospace-fork/config.nix
   ];
 }
