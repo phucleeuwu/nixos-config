@@ -1,7 +1,4 @@
-{
-  pkgs,
-  ...
-}: {
+{pkgs, ...}: {
   xdg.configFile."aerospace/aerospace.toml" = let
     sketchybar = "${pkgs.sketchybar}/bin/sketchybar";
     aerospace-settings = {
