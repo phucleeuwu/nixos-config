@@ -1,12 +1,18 @@
-{pkgs, ...}: {
-  programs.aerospace = {
-    enable = true;
-    userSettings = {
+{ lib, pkgs, ... }:
+{
+  xdg.configFile."aerospace/aerospace.toml" =
+    let
+      sketchybar = "${pkgs.sketchybar}/bin/sketchybar";
+      aerospace-settings = {
+      # fork special configs
+        new-window-detection-timeout = 50;
+        new-window-detection-debounce = 100;
+      # real config
       start-at-login = true;
       exec-on-workspace-change = [
         "/bin/bash"
         "-c"
-        "sketchybar --trigger aerospace_workspace_change FOCUSED_WORKSPACE=$AEROSPACE_FOCUSED_WORKSPACE"
+        "${sketchybar} --trigger aerospace_workspace_change FOCUSED_WORKSPACE=$AEROSPACE_FOCUSED_WORKSPACE"
       ];
       enable-normalization-flatten-containers = true;
       enable-normalization-opposite-orientation-for-nested-containers = true;
@@ -16,7 +22,7 @@
       key-mapping.preset = "qwerty";
       on-focused-monitor-changed = ["move-mouse monitor-lazy-center"];
       on-focus-changed = [
-        "exec-and-forget sketchybar --trigger aerospace_focus_change"
+        "exec-and-forget ${sketchybar} --trigger aerospace_focus_change"
         "move-mouse window-lazy-center"
       ];
       automatically-unhide-macos-hidden-apps = false;
@@ -54,8 +60,8 @@
         "alt-r" = "mode resize";
         "alt-shift-semicolon" = "mode service";
         # Application Shortcuts
-        "alt-w" = "exec-and-forget open -a ${pkgs.wezterm}/Applications/Wezterm.app";
-        "alt-a" = "exec-and-forget open -a ${pkgs.arc-browser}/Applications/Arc.app";
+        # "alt-w" = "exec-and-forget open -a ${pkgs.wezterm}/Applications/Wezterm.app";
+        # "alt-a" = "exec-and-forget open -a ${pkgs.arc-browser}/Applications/Arc.app";
       };
       mode.resize.binding = {
         "h" = "resize width -50";
@@ -63,7 +69,6 @@
         "k" = "resize height -50";
         "l" = "resize width +50";
         "b" = "balance-sizes";
-        "enter" = "mode main";
         "esc" = "mode main";
       };
       mode.service.binding = {
@@ -108,13 +113,18 @@
         }
         {
           "if".app-name-regex-substring = "spotify";
-          run = "move-node-to-workspace 3";
+          run = "move-node-to-workspace 2";
         }
         {
           "if".app-name-regex-substring = "finder";
           run = "move-node-to-workspace 1";
         }
       ];
+      };
+      format = pkgs.formats.toml { };
+    in
+    {
+      source = (format.generate "aerospace.toml" aerospace-settings);
+      onChange = "${pkgs.aerospace-fork}/bin/aerospace reload-config";
     };
-  };
 }

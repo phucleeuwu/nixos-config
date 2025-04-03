@@ -15,6 +15,6 @@
       require("init")
     '';
     executable = true;
-    onChange = "${pkgs.aerospace-fork}/bin/aerospace reload-config";
+    onChange = "${pkgs.sketchybar}/bin/sketchybar --reload";
   };
 }
