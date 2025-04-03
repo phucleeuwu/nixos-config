@@ -58,6 +58,10 @@
         "alt-r" = "mode resize";
         "alt-shift-semicolon" = "mode service";
         # Application Shortcuts
+        "alt-w" = "workspace W";
+        "alt-shift-w" = "move-node-to-workspace W";
+        "alt-a" = "workspace A";
+        "alt-shift-a" = "move-node-to-workspace A";
         # "alt-w" = "exec-and-forget open -a ${pkgs.wezterm}/Applications/Wezterm.app";
         # "alt-a" = "exec-and-forget open -a ${pkgs.arc-browser}/Applications/Arc.app";
       };
