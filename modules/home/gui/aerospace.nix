@@ -1,12 +1,14 @@
-{ lib, pkgs, ... }:
 {
-  xdg.configFile."aerospace/aerospace.toml" =
-    let
-      sketchybar = "${pkgs.sketchybar}/bin/sketchybar";
-      aerospace-settings = {
+  lib,
+  pkgs,
+  ...
+}: {
+  xdg.configFile."aerospace/aerospace.toml" = let
+    sketchybar = "${pkgs.sketchybar}/bin/sketchybar";
+    aerospace-settings = {
       # fork special configs
-        new-window-detection-timeout = 50;
-        new-window-detection-debounce = 100;
+      new-window-detection-timeout = 50;
+      new-window-detection-debounce = 100;
       # real config
       start-at-login = true;
       exec-on-workspace-change = [
@@ -120,11 +122,10 @@
           run = "move-node-to-workspace 1";
         }
       ];
-      };
-      format = pkgs.formats.toml { };
-    in
-    {
-      source = (format.generate "aerospace.toml" aerospace-settings);
-      onChange = "${pkgs.aerospace-fork}/bin/aerospace reload-config";
     };
+    format = pkgs.formats.toml {};
+  in {
+    source = format.generate "aerospace.toml" aerospace-settings;
+    onChange = "${pkgs.aerospace-fork}/bin/aerospace reload-config";
+  };
 }
