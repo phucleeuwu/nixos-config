@@ -14,14 +14,13 @@ in {
       new-window-detection-debounce = 100;
       # real config
       start-at-login = false; # for aerospace-fork to work
-      automatically-unhide-macos-hidden-apps = false;
+      automatically-unhide-macos-hidden-apps = true;
       enable-normalization-flatten-containers = true;
       enable-normalization-opposite-orientation-for-nested-containers = true;
       accordion-padding = 80;
       default-root-container-layout = "tiles";
       default-root-container-orientation = "auto";
       key-mapping.preset = "qwerty";
-      after-startup-command = ["workspace E"];
       on-focused-monitor-changed = ["move-mouse monitor-lazy-center"];
       exec-on-workspace-change = [
         "/bin/bash"
