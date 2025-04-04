@@ -12,7 +12,7 @@ in {
       # fork special configs
       new-window-detection-timeout = 50;
       new-window-detection-debounce = 100;
-      # real config
+      # main config
       start-at-login = false; # for aerospace-fork to work
       automatically-unhide-macos-hidden-apps = true;
       enable-normalization-flatten-containers = true;
