@@ -7,6 +7,7 @@
 in {
   programs.aerospace = {
     enable = true;
+    package = pkgs.aerospace-fork;
     userSettings = {
       # fork special configs
       new-window-detection-timeout = 50;
@@ -20,6 +21,7 @@ in {
       default-root-container-layout = "tiles";
       default-root-container-orientation = "auto";
       key-mapping.preset = "qwerty";
+      after-startup-command = ["workspace E"];
       on-focused-monitor-changed = ["move-mouse monitor-lazy-center"];
       exec-on-workspace-change = [
         "/bin/bash"
