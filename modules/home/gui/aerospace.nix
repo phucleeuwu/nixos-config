@@ -40,7 +40,8 @@ in {
         outer.top = 5;
         outer.right = 5;
       };
-      mode.main.binding = {
+      mode.main.binding =
+        {
           "alt-shift-space" = "layout floating tiling";
           "alt-f" = "fullscreen";
           "alt-slash" = "layout tiles horizontal vertical";
