@@ -38,8 +38,7 @@ in {
         outer.top = 5;
         outer.right = 5;
       };
-      mode.main.binding = (
-        {
+      mode.main.binding = {
           "alt-shift-space" = "layout floating tiling";
           "alt-f" = "fullscreen";
           "alt-slash" = "layout tiles horizontal vertical";
@@ -75,8 +74,7 @@ in {
               ]
             ) (lib.strings.stringToCharacters "1234AWE")
           )
-        )
-      );
+        );
       mode.resize.binding = {
         "h" = "resize width -50";
         "j" = "resize height +50";
