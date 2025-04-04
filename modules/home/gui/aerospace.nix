@@ -3,12 +3,13 @@
 in {
   programs.aerospace = {
     enable = true;
-    # fork special configs
     userSettings = {
+      # fork special configs
       new-window-detection-timeout = 50;
       new-window-detection-debounce = 100;
       # real config
       start-at-login = false;
+      automatically-unhide-macos-hidden-apps = false;
       enable-normalization-flatten-containers = true;
       enable-normalization-opposite-orientation-for-nested-containers = true;
       accordion-padding = 80;
@@ -25,7 +26,6 @@ in {
         "exec-and-forget ${sketchybar} --trigger aerospace_focus_change"
         "move-mouse window-lazy-center"
       ];
-      automatically-unhide-macos-hidden-apps = false;
       gaps = {
         inner.horizontal = 10;
         inner.vertical = 10;
@@ -59,13 +59,11 @@ in {
         "alt-shift-tab" = "move-workspace-to-monitor --wrap-around next";
         "alt-r" = "mode resize";
         "alt-shift-semicolon" = "mode service";
-        # Application Shortcuts
+        # To use application launcher, set key binding in raycast. For example alt+w = wezterm
         "alt-w" = "workspace W";
         "alt-shift-w" = "move-node-to-workspace W";
         "alt-a" = "workspace A";
         "alt-shift-a" = "move-node-to-workspace A";
-        # "alt-w" = "exec-and-forget open -a ${pkgs.wezterm}/Applications/Wezterm.app";
-        # "alt-a" = "exec-and-forget open -a ${pkgs.arc-browser}/Applications/Arc.app";
       };
       mode.resize.binding = {
         "h" = "resize width -50";
