@@ -1,4 +1,8 @@
-{lib, pkgs, ...}: let
+{
+  lib,
+  pkgs,
+  ...
+}: let
   sketchybar = "${pkgs.sketchybar}/bin/sketchybar";
 in {
   programs.aerospace = {
@@ -34,29 +38,32 @@ in {
         outer.top = 5;
         outer.right = 5;
       };
-      mode.main.binding = ( {
-        "alt-shift-space" = "layout floating tiling";
-        "alt-f" = "fullscreen";
-        "alt-slash" = "layout tiles horizontal vertical";
-        "alt-comma" = "layout accordion horizontal vertical";
-        "alt-h" = "focus left";
-        "alt-j" = "focus down";
-        "alt-k" = "focus up";
-        "alt-l" = "focus right";
-        "alt-shift-h" = "move left";
-        "alt-shift-j" = "move down";
-        "alt-shift-k" = "move up";
-        "alt-shift-l" = "move right";
-        "alt-tab" = "workspace-back-and-forth";
-        "alt-shift-tab" = "move-workspace-to-monitor --wrap-around next";
-        "alt-r" = "mode resize";
-        "alt-shift-semicolon" = "mode service";
-      }
+      mode.main.binding = (
+        {
+          "alt-shift-space" = "layout floating tiling";
+          "alt-f" = "fullscreen";
+          "alt-slash" = "layout tiles horizontal vertical";
+          "alt-comma" = "layout accordion horizontal vertical";
+          "alt-h" = "focus left";
+          "alt-j" = "focus down";
+          "alt-k" = "focus up";
+          "alt-l" = "focus right";
+          "alt-shift-h" = "move left";
+          "alt-shift-j" = "move down";
+          "alt-shift-k" = "move up";
+          "alt-shift-l" = "move right";
+          "alt-tab" = "workspace-back-and-forth";
+          "alt-shift-tab" = "move-workspace-to-monitor --wrap-around next";
+          "alt-r" = "mode resize";
+          "alt-shift-semicolon" = "mode service";
+        }
         # Dynamically generated workspace bindings
         // builtins.listToAttrs (
           builtins.concatLists (
-            map (letter:
-              let lower = lib.strings.toLower letter; in [
+            map (
+              letter: let
+                lower = lib.strings.toLower letter;
+              in [
                 {
                   name = "alt-${lower}";
                   value = "workspace ${letter}";
