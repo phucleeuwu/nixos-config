@@ -3,6 +3,7 @@
 in {
   programs.aerospace = {
     enable = true;
+    # package = pkgs.aerospace-fork;
     userSettings = {
       # fork special configs
       new-window-detection-timeout = 50;
@@ -106,7 +107,7 @@ in {
       # Automatic Window Assignment
       on-window-detected = [
         {
-          "if".app-name-regex-substring = "wezterm";
+          "if".app-name-regex-substring = "wezterm|kitty|ghosty";
           run = "move-node-to-workspace W";
         }
         {
