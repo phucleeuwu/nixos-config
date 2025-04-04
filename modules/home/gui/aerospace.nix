@@ -3,7 +3,6 @@
 in {
   programs.aerospace = {
     enable = true;
-    # package = pkgs.aerospace-fork;
     userSettings = {
       # fork special configs
       new-window-detection-timeout = 50;
