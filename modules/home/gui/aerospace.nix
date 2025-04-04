@@ -8,7 +8,7 @@ in {
       new-window-detection-timeout = 50;
       new-window-detection-debounce = 100;
       # real config
-      start-at-login = false;
+      start-at-login = false; # for aerospace-fork to work
       automatically-unhide-macos-hidden-apps = false;
       enable-normalization-flatten-containers = true;
       enable-normalization-opposite-orientation-for-nested-containers = true;
