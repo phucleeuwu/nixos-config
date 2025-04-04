@@ -1,12 +1,10 @@
-{pkgs, ...}: 
-  let
-    sketchybar = "${pkgs.sketchybar}/bin/sketchybar";
-  in
-    {
-    programs.aerospace = {
-      enable = true;
-      # fork special configs
-      userSettings = {
+{pkgs, ...}: let
+  sketchybar = "${pkgs.sketchybar}/bin/sketchybar";
+in {
+  programs.aerospace = {
+    enable = true;
+    # fork special configs
+    userSettings = {
       new-window-detection-timeout = 50;
       new-window-detection-debounce = 100;
       # real config
