@@ -1,4 +1,4 @@
-{pkgs, ...}: let
+{lib, pkgs, ...}: let
   sketchybar = "${pkgs.sketchybar}/bin/sketchybar";
 in {
   programs.aerospace = {
@@ -34,7 +34,7 @@ in {
         outer.top = 5;
         outer.right = 5;
       };
-      mode.main.binding = {
+      mode.main.binding = ( {
         "alt-shift-space" = "layout floating tiling";
         "alt-f" = "fullscreen";
         "alt-slash" = "layout tiles horizontal vertical";
@@ -47,24 +47,29 @@ in {
         "alt-shift-j" = "move down";
         "alt-shift-k" = "move up";
         "alt-shift-l" = "move right";
-        "alt-1" = "workspace 1";
-        "alt-2" = "workspace 2";
-        "alt-3" = "workspace 3";
-        "alt-4" = "workspace 4";
-        "alt-shift-1" = "move-node-to-workspace 1";
-        "alt-shift-2" = "move-node-to-workspace 2";
-        "alt-shift-3" = "move-node-to-workspace 3";
-        "alt-shift-4" = "move-node-to-workspace 4";
         "alt-tab" = "workspace-back-and-forth";
         "alt-shift-tab" = "move-workspace-to-monitor --wrap-around next";
         "alt-r" = "mode resize";
         "alt-shift-semicolon" = "mode service";
-        # To use application launcher, set key binding in raycast. For example alt+w = wezterm
-        "alt-w" = "workspace W";
-        "alt-shift-w" = "move-node-to-workspace W";
-        "alt-a" = "workspace A";
-        "alt-shift-a" = "move-node-to-workspace A";
-      };
+      }
+        # Dynamically generated workspace bindings
+        // builtins.listToAttrs (
+          builtins.concatLists (
+            map (letter:
+              let lower = lib.strings.toLower letter; in [
+                {
+                  name = "alt-${lower}";
+                  value = "workspace ${letter}";
+                }
+                {
+                  name = "alt-shift-${lower}";
+                  value = "move-node-to-workspace ${letter}";
+                }
+              ]
+            ) (lib.strings.stringToCharacters "1234AWE")
+          )
+        )
+      );
       mode.resize.binding = {
         "h" = "resize width -50";
         "j" = "resize height +50";
@@ -119,7 +124,7 @@ in {
         }
         {
           "if".app-name-regex-substring = "finder";
-          run = "move-node-to-workspace 1";
+          run = "move-node-to-workspace E";
         }
       ];
     };
