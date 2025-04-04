@@ -1,17 +1,16 @@
-{pkgs, ...}: {
-  xdg.configFile."aerospace/aerospace.toml" = let
+{pkgs, ...}: 
+  let
     sketchybar = "${pkgs.sketchybar}/bin/sketchybar";
-    aerospace-settings = {
+  in
+    {
+    programs.aerospace = {
+      enable = true;
       # fork special configs
+      userSettings = {
       new-window-detection-timeout = 50;
       new-window-detection-debounce = 100;
       # real config
-      start-at-login = true;
-      exec-on-workspace-change = [
-        "/bin/bash"
-        "-c"
-        "${sketchybar} --trigger aerospace_workspace_change FOCUSED_WORKSPACE=$AEROSPACE_FOCUSED_WORKSPACE"
-      ];
+      start-at-login = false;
       enable-normalization-flatten-containers = true;
       enable-normalization-opposite-orientation-for-nested-containers = true;
       accordion-padding = 80;
@@ -19,6 +18,11 @@
       default-root-container-orientation = "auto";
       key-mapping.preset = "qwerty";
       on-focused-monitor-changed = ["move-mouse monitor-lazy-center"];
+      exec-on-workspace-change = [
+        "/bin/bash"
+        "-c"
+        "${sketchybar} --trigger aerospace_workspace_change FOCUSED_WORKSPACE=$AEROSPACE_FOCUSED_WORKSPACE"
+      ];
       on-focus-changed = [
         "exec-and-forget ${sketchybar} --trigger aerospace_focus_change"
         "move-mouse window-lazy-center"
@@ -123,9 +127,5 @@
         }
       ];
     };
-    format = pkgs.formats.toml {};
-  in {
-    source = format.generate "aerospace.toml" aerospace-settings;
-    onChange = "${pkgs.aerospace-fork}/bin/aerospace reload-config";
   };
 }
