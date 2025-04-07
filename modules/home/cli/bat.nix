@@ -1,4 +1,4 @@
-{config, ...}: {
+{config, pkgs, ...}: {
   programs.bat = {
     enable = true;
     config = {
@@ -7,5 +7,10 @@
       color = "always";
       decorations = "always";
     };
+    extraPackages= with pkgs.bat-extras; [
+      batgrep
+  batdiff
+  batman
+];
   };
 }
