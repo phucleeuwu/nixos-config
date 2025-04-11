@@ -14,14 +14,11 @@ in {
       new-window-detection-debounce = 100;
       # main config
       start-at-login = false; # for aerospace-fork to work
-      automatically-unhide-macos-hidden-apps = true;
       enable-normalization-flatten-containers = true;
       enable-normalization-opposite-orientation-for-nested-containers = true;
-      accordion-padding = 40;
       default-root-container-layout = "tiles";
       default-root-container-orientation = "auto";
-      key-mapping.preset = "qwerty";
-      on-focused-monitor-changed = ["move-mouse monitor-lazy-center"];
+      automatically-unhide-macos-hidden-apps = true;
       exec-on-workspace-change = [
         "/bin/bash"
         "-c"
@@ -31,6 +28,7 @@ in {
         "exec-and-forget ${sketchybar} --trigger aerospace_focus_change"
         "move-mouse window-lazy-center"
       ];
+      accordion-padding = 40;
       gaps = {
         inner.horizontal = 10;
         inner.vertical = 10;
@@ -78,12 +76,12 @@ in {
           )
         );
       mode.resize.binding = {
+        "esc" = "mode main";
         "h" = "resize width -50";
         "j" = "resize height +50";
         "k" = "resize height -50";
         "l" = "resize width +50";
-        "b" = "balance-sizes";
-        "esc" = "mode main";
+        "b" = [ "balance-sizes" "mode main"];
       };
       mode.service.binding = {
         "esc" = [
