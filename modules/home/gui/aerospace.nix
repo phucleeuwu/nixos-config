@@ -17,7 +17,7 @@ in {
       automatically-unhide-macos-hidden-apps = true;
       enable-normalization-flatten-containers = true;
       enable-normalization-opposite-orientation-for-nested-containers = true;
-      accordion-padding = 80;
+      accordion-padding = 40;
       default-root-container-layout = "tiles";
       default-root-container-orientation = "auto";
       key-mapping.preset = "qwerty";
@@ -116,24 +116,24 @@ in {
         ];
       };
       # Automatic Window Assignment
-      on-window-detected = [
-        {
-          "if".app-name-regex-substring = "wezterm|kitty|ghosty";
-          run = "move-node-to-workspace W";
-        }
-        {
-          "if".app-name-regex-substring = "arc";
-          run = "move-node-to-workspace A";
-        }
-        {
-          "if".app-name-regex-substring = "spotify";
-          run = "move-node-to-workspace 2";
-        }
-        {
-          "if".app-name-regex-substring = "finder";
-          run = "move-node-to-workspace E";
-        }
-      ];
+      # on-window-detected = [
+      #   {
+      #     "if".app-name-regex-substring = "wezterm|kitty|ghosty";
+      #     run = "move-node-to-workspace W";
+      #   }
+      #   {
+      #     "if".app-name-regex-substring = "arc";
+      #     run = "move-node-to-workspace A";
+      #   }
+      #   {
+      #     "if".app-name-regex-substring = "spotify";
+      #     run = "move-node-to-workspace 2";
+      #   }
+      #   {
+      #     "if".app-name-regex-substring = "finder";
+      #     run = "move-node-to-workspace E";
+      #   }
+      # ];
     };
   };
 }
