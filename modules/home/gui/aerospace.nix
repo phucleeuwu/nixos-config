@@ -81,7 +81,7 @@ in {
         "j" = "resize height +50";
         "k" = "resize height -50";
         "l" = "resize width +50";
-        "b" = [ "balance-sizes" "mode main"];
+        "b" = ["balance-sizes" "mode main"];
       };
       mode.service.binding = {
         "esc" = [
