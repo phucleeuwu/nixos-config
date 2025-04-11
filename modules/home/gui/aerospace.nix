@@ -20,7 +20,8 @@ in {
       default-root-container-orientation = "auto";
       automatically-unhide-macos-hidden-apps = true;
       exec-on-workspace-change = [
-        "/bin/bash" "-c"
+        "/bin/bash"
+        "-c"
         "${sketchybar} --trigger aerospace_workspace_change FOCUSED_WORKSPACE=$AEROSPACE_FOCUSED_WORKSPACE"
       ];
       on-focus-changed = [
