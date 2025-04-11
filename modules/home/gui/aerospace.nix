@@ -93,24 +93,24 @@ in {
         "alt-shift-l" = ["join-with right" "mode main"];
       };
       # Automatic Window Assignment
-      # on-window-detected = [
-      #   {
-      #     "if".app-name-regex-substring = "wezterm|kitty|ghosty";
-      #     run = "move-node-to-workspace W";
-      #   }
-      #   {
-      #     "if".app-name-regex-substring = "arc";
-      #     run = "move-node-to-workspace A";
-      #   }
-      #   {
-      #     "if".app-name-regex-substring = "spotify";
-      #     run = "move-node-to-workspace 2";
-      #   }
-      #   {
-      #     "if".app-name-regex-substring = "finder";
-      #     run = "move-node-to-workspace E";
-      #   }
-      # ];
+      on-window-detected = [
+        {
+          "if".app-name-regex-substring = "wezterm|kitty|ghosty";
+          run = "move-node-to-workspace W";
+        }
+        {
+          "if".app-name-regex-substring = "arc";
+          run = "move-node-to-workspace A";
+        }
+        {
+          "if".app-name-regex-substring = "spotify";
+          run = "move-node-to-workspace 2";
+        }
+        {
+          "if".app-name-regex-substring = "finder";
+          run = "move-node-to-workspace E";
+        }
+      ];
     };
   };
 }
