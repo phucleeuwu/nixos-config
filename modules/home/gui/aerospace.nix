@@ -35,10 +35,10 @@ in {
           vertical = 10;
         };
         outer = {
-        bottom = 45;
-        top = 5;
+          bottom = 45;
+          top = 5;
           left = 5;
-        right = 5;
+          right = 5;
         };
       };
       mode.main.binding =
