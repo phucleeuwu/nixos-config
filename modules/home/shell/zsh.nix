@@ -3,7 +3,7 @@
     enable = true;
     autocd = true;
     autosuggestion.enable = true;
-syntaxHighlighting.enable = true;
+    syntaxHighlighting.enable = true;
     # OhMyZsh plugins
     initExtra = ''
       source ${pkgs.zinit}/share/zinit/zinit.zsh
