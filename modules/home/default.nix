@@ -36,7 +36,7 @@
   xdg.enable = true;
   home = {
     stateVersion = "25.05";
-    username = flake.config.me.username;
+    inherit (flake.config.me) username;
     packages = with pkgs; [
       maple-mono.NF
       spotify
