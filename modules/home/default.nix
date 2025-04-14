@@ -1,4 +1,8 @@
-{flake, pkgs, ...}: {
+{
+  flake,
+  pkgs,
+  ...
+}: {
   imports = [
     ./aliases.nix
     ./shell/fish.nix
@@ -33,11 +37,11 @@
   home = {
     stateVersion = "25.05";
     username = flake.config.me.username;
-  packages = with pkgs; [
-    maple-mono.NF
-    spotify
-    chatgpt
-  ];
+    packages = with pkgs; [
+      maple-mono.NF
+      spotify
+      chatgpt
+    ];
   };
   catppuccin = {
     enable = true;
