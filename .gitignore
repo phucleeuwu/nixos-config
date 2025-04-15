@@ -1,4 +1,3 @@
-config.nix
 /result
 /.direnv
 /.pre-commit-config.yaml
@@ -35,3 +34,4 @@ Temporary Items
 ### macOS Patch ###
 # iCloud generated files
 *.icloud
+config.nix
