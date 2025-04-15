@@ -1,10 +1,7 @@
+config.nix
 /result
 /.direnv
 /.pre-commit-config.yaml
-
-nvim
-zed/prompts
-zed/conversations
 
 ### Created by https://www.gitignore.io
 ### macOS ###
@@ -38,4 +35,3 @@ Temporary Items
 ### macOS Patch ###
 # iCloud generated files
 *.icloud
-config.nix
