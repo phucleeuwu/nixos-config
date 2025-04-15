@@ -43,6 +43,7 @@
       chatgpt
     ];
   };
+  # let catppuccin take care all the themes
   catppuccin = {
     enable = true;
     flavor = "mocha";
