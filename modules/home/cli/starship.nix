@@ -6,9 +6,6 @@ _: {
     enableNushellIntegration = true;
     enableTransience = true;
     settings = {
-      # add_newline = false;
-      # format = "$directory$character";
-      # right_format = "$cmd_duration$git_status$all";
       command_timeout = 1000;
       character = {
         success_symbol = "[[󰄛](green) ❯](peach)";
@@ -28,8 +25,6 @@ _: {
       };
       cmd_duration = {
         min_time = 10000;
-        format = "[ 󰚭 $duration ]($style)";
-        style = "bold yellow";
       };
     };
   };
