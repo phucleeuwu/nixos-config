@@ -19,7 +19,6 @@ _: {
         truncation_length = 4;
         style = "bold lavender";
         read_only = "󰌾";
-        home_symbol = "";
       };
       git_metrics = {
         disabled = false;
