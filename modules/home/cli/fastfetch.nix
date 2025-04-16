@@ -11,7 +11,7 @@ _: {
         "break"
         {
           type = "kernel";
-          key = " Phuc Lee   ";
+          key = "    🐧Tux   ";
           keyColor = "magenta";
         }
         {
