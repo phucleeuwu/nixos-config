@@ -41,6 +41,7 @@
       maple-mono.NF
       spotify
       chatgpt
+      onefetch
     ];
   };
   # let catppuccin take care all the themes
