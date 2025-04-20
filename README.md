@@ -63,6 +63,5 @@ Start from `flake.nix` (see [Flakes](https://nixos.wiki/wiki/Flakes)). [`flake-p
   sudo nix-env -p /nix/var/nix/profiles/system --delete-generations +2
   sudo nixos-rebuild boot
   ```
-- To autoformat the project tree using nixpkgs-fmt, run `nix fmt`.
 - To build all flake outputs (locally or in CI), run `nix --accept-flake-config run github:juspay/omnix ci build`
 - For secrets management, I use [agenix](https://github.com/ryantm/agenix), because it works with SSH keys, and functions well on macOS and NixOS.
