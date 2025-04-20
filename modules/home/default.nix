@@ -4,7 +4,7 @@
   ...
 }: {
   imports = [
-    ./aliases.nix
+    ./shell/aliases.nix
     ./shell/fish.nix
     # ./shell/nushell.nix
     # ./shell/zsh.nix

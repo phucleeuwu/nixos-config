@@ -3,6 +3,10 @@
     enable = true;
     userName = flake.config.me.fullname;
     userEmail = flake.config.me.email;
+    extraConfig = {
+      init.defaultBranch = "main";
+      credential.helper = "osxkeychain"; # macOS Keychain for credentials
+    };
     delta = {
       enable = true;
       options = {
@@ -11,10 +15,6 @@
         hyperlinks = true;
         line-numbers = true;
       };
-    };
-    extraConfig = {
-      init.defaultBranch = "main";
-      credential.helper = "osxkeychain"; # macOS Keychain for credentials
     };
   };
 }
