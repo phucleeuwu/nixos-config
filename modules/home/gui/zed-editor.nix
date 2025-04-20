@@ -5,8 +5,8 @@
       vim_mode = true;
       relative_line_numbers = true;
       buffer_font_family = "Maple Mono NF";
-      ui_font_size = 16;
-      buffer_font_size = 16;
+      ui_font_size = 19;
+      buffer_font_size = 19;
       edit_predictions = {
         mode = "eager_preview";
       };
